@@ -1,0 +1,18 @@
+@import "../var";
+
+.words__wrapper {
+  padding: 15px;
+  display: flex;
+  justify-content: space-around;
+
+  & button {
+    @include button;
+    font-weight: $light;
+    height: 25px;
+  }
+}
+
+.word-list__buttons {
+  display: flex;
+  gap: 10px;
+}

@@ -1,0 +1,19 @@
+@import "../var";
+
+.header {
+  display: flex;
+  justify-content: flex-start;
+  min-height: 4rem;
+  background-color: $bc-header;
+  padding: 5px;
+  box-sizing: border-box;
+
+  & .header__title {
+    @include font($font-Basic, $bold, $font-30, $font-dark);
+  }
+
+  & img {
+    height: 50px;
+    margin-right: 50px;
+  }
+}

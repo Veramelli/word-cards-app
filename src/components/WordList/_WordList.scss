@@ -1,0 +1,32 @@
+@import "../var";
+
+.list__wrapper {
+  background-color: $bc-wordList;
+  height: 500px;
+}
+
+.word__input {
+  box-sizing: border-box;
+  padding: 15px;
+  display: flex;
+  gap: 15px;
+
+  @include font($font-Basic, $regular, $font-16, $font-dark);
+
+  & input {
+    display: inline-block;
+    height: 25px;
+    width: 15vw;
+  }
+
+  & .word-list__buttons {
+    display: flex;
+    gap: 15px;
+    height: 30px;
+
+    & button {
+      @include button;
+      height: 30px;
+    }
+  }
+}

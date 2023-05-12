@@ -1,0 +1,35 @@
+@import "../var";
+
+.footer {
+  box-sizing: border-box;
+  padding: 20px;
+  height: 100px;
+  @include font($font-Basic, $light, $font-16, $font-dark);
+
+  background-color: $bc-footer;
+
+  & .footer__wrapper {
+    display: flex;
+
+    align-items: center;
+    flex-wrap: wrap;
+
+    & img {
+      height: 50px;
+    }
+
+    & .footer-link {
+      width: 30vw;
+    }
+
+    & .footer__text {
+      font-weight: $regular;
+    }
+
+    & a {
+      color: $font-dark;
+      font-weight: $bold;
+      text-decoration: none;
+    }
+  }
+}

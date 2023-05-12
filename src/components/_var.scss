@@ -1,0 +1,44 @@
+/* fonts */
+
+@mixin font($family, $weight, $size, $color) {
+  font-weight: $weight;
+  font-size: $size;
+  font-family: $family;
+  color: $color;
+}
+
+$font-Card: "Comfortaa", cursive;
+$font-Basic: "Commissioner", sans-serif;
+
+$font-60: 60px; //card
+$font-30: 30px;
+$font-16: 16px;
+
+$light: 300;
+$regular: 400;
+$bold: 700;
+
+/* colors */
+
+$font-light: #ccc;
+$font-dark: #666565;
+
+$bc-header: #ffc49385;
+$bc-footer: #62c300ad;
+$bc-card: #f2e9ff;
+$bc-wordList: #d8f9fe;
+
+/* button */
+
+@mixin button {
+  width: 200px;
+  height: 40px;
+  background-color: $bc-footer;
+  color: $font-dark;
+  font-size: $font-16;
+  font-weight: $bold;
+  border-radius: 15px;
+  border-color: $bc-footer;
+  cursor: pointer;
+  box-shadow: 0px 5px 10px 2px rgba(57, 36, 75, 0.2);
+}
