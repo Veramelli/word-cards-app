@@ -1,8 +1,9 @@
+import React from "react";
 import Card from "../Card/Card";
 import WordList from "../WordList/WordList";
 import "./_Main.scss";
 
-function Main() {
+export default function Main() {
   return (
     <div className="main">
       <Card />
@@ -10,5 +11,3 @@ function Main() {
     </div>
   );
 }
-
-export default Main;

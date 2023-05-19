@@ -1,7 +1,8 @@
+import React from "react";
 import "./_Footer.scss";
 import logo from "./gitHub.png";
 
-function Footer() {
+export default function Footer() {
   return (
     <footer className="footer">
       <div className="footer__wrapper">
@@ -18,5 +19,3 @@ function Footer() {
     </footer>
   );
 }
-
-export default Footer;

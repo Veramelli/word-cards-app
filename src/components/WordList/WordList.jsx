@@ -1,7 +1,8 @@
+import React from "react";
 import Word from "../Word/Word";
 import "./_WordList.scss";
 
-function WordList() {
+export default function WordList() {
   return (
     <div className="list__wrapper">
       <div className="word__input">
@@ -16,7 +17,6 @@ function WordList() {
         </div>
         <div className="word-list__buttons">
           <button>Сохранить</button>
-          <button>Редактировать</button>
           <button>Удалить</button>
         </div>
       </div>
@@ -24,5 +24,3 @@ function WordList() {
     </div>
   );
 }
-
-export default WordList;

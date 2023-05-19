@@ -1,6 +1,7 @@
+import React from "react";
 import "./_Word.scss";
 
-function Word() {
+export default function Word() {
   return (
     <div className="words__wrapper">
       <div className="word__english">word__english</div>
@@ -13,5 +14,3 @@ function Word() {
     </div>
   );
 }
-
-export default Word;
