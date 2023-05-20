@@ -13,12 +13,11 @@ function Card() {
       <div className="card__wrapper">
         <div className="card__word">move</div>
         <div className="card__transcription">[ muːv ]</div>
-        <div className={`card__translation ${pressed ? "visible" : ""}`}>
-          двигать
-        </div>
-        <button className={pressed ? "hidden" : ""} onClick={showTranslation}>
-          Показать перевод
-        </button>
+        {pressed ? (
+          <div className="card__translation">двигать</div>
+        ) : (
+          <button onClick={showTranslation}>Показать перевод</button>
+        )}
       </div>
     </div>
   );

@@ -1,14 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
 import "./_Word.scss";
 
-export default function Word() {
+export default function Word(props) {
+  const [pressed, setPressed] = useState(false);
+  function changeWord() {
+    setPressed(!pressed);
+  }
+
   return (
     <div className="words__wrapper">
-      <div className="word__english">word__english</div>
-      <div className="word__transcription">word__transcription</div>
-      <div className="word__translation">word__translation</div>
+      {pressed ? (
+        <>
+          <div className="word__english">
+            <input type="text" placeholder={props.word.english} />
+          </div>
+          <div className="word__transcription">
+            <input type="text" placeholder={props.word.transcription} />
+          </div>
+          <div className="word__translation">
+            <input type="text" placeholder={props.word.russian} />
+          </div>
+        </>
+      ) : (
+        <>
+          <div className="word__english">{props.word.english}</div>
+          <div className="word__transcription">{props.word.transcription}</div>
+          <div className="word__translation">{props.word.russian}</div>
+        </>
+      )}
+
       <div className="word-list__buttons">
-        <button>Редактировать</button>
+        <button onClick={changeWord}>
+          {pressed ? "Сохранить" : "Редактировать"}
+        </button>
         <button>Удалить</button>
       </div>
     </div>

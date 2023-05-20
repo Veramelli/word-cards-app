@@ -1,6 +1,7 @@
 import React from "react";
 import Word from "../Word/Word";
 import "./_WordList.scss";
+import words from "./words.json";
 
 export default function WordList() {
   return (
@@ -20,7 +21,9 @@ export default function WordList() {
           <button>Удалить</button>
         </div>
       </div>
-      <Word />
+      {words.map((word) => (
+        <Word word={word} />
+      ))}
     </div>
   );
 }

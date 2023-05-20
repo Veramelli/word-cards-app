@@ -9,7 +9,7 @@
   @include font($font-Card, $bold, $font-60, $font-dark);
 
   & .card__wrapper {
-    margin: 0 auto;
+    margin: 1.5rem auto 0;
     padding-bottom: 15px;
     height: 25vh;
     width: 30vw;
@@ -23,20 +23,11 @@
   }
 
   & .card__translation {
-    display: none;
     padding-top: 15px;
     font-size: $font-30;
   }
 
   & button {
     @include button;
-  }
-
-  & .visible {
-    display: block;
-  }
-
-  & .hidden {
-    display: none;
   }
 }

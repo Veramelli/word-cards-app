@@ -2,24 +2,19 @@
 
 .list__wrapper {
   background-color: $bc-wordList;
-  height: 500px;
+  min-height: 500px;
 }
 
 .word__input {
   box-sizing: border-box;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  padding: 15px 0;
-  display: flex;
-  gap: 15px;
+  padding: 15px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 
   @include font($font-Basic, $regular, $font-16, $font-dark);
 
   & input {
-    display: inline-block;
     height: 25px;
-    width: 15w;
   }
 
   & .word-list__buttons {

@@ -1,9 +1,13 @@
 @import "../var";
 
 .words__wrapper {
-  padding: 15px 0;
-  display: flex;
-  justify-content: space-around;
+  padding: 15px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  & input {
+    height: 25px;
+  }
 
   & button {
     @include button;
