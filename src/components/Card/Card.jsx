@@ -13,10 +13,12 @@ function Card(props) {
 
   function showPrevWord() {
     setIdWord(idWord - 1);
+    setPressed(false);
   }
 
   function showNextWord() {
     setIdWord(idWord + 1);
+    setPressed(false);
   }
 
   return (
