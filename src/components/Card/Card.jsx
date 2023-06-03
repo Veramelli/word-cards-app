@@ -5,7 +5,7 @@ function Card() {
   const [pressed, setPressed] = useState(false);
 
   function showTranslation() {
-    setPressed(!pressed);
+    setPressed((prev) => !prev);
   }
 
   return (

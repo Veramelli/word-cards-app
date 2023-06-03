@@ -4,7 +4,7 @@ import "./_Word.scss";
 export default function Word(props) {
   const [pressed, setPressed] = useState(false);
   function changeWord() {
-    setPressed(!pressed);
+    setPressed((prev) => !prev);
   }
 
   return (
