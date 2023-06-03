@@ -4,14 +4,18 @@
   box-sizing: border-box;
   padding-top: 15px;
   padding-bottom: 15px;
-  height: 45vh;
+  height: 55vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
   background-color: $bc-card;
   @include font($font-Card, $bold, $font-60, $font-dark);
 
   & .card__wrapper {
     margin: 1.5rem auto 0;
     padding-bottom: 15px;
-    height: 25vh;
+    height: 30vh;
     width: 30vw;
     box-shadow: 0px 1px 12px 8px rgba(57, 36, 75, 0.2);
   }
@@ -23,11 +27,32 @@
   }
 
   & .card__translation {
-    padding-top: 15px;
+    padding-top: 20px;
     font-size: $font-30;
   }
 
   & button {
     @include button;
+  }
+}
+
+.button__wrapper {
+  margin-top: 20px;
+  & button {
+    margin-right: 15px;
+    height: 50px;
+    width: 50px;
+    background: center;
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+    background-color: $bc-card;
+    border: none;
+    border-radius: 50%;
+  }
+  & .button-left {
+    background-image: url("./left.png");
+  }
+  & .button-right {
+    background-image: url("./right.png");
   }
 }
