@@ -34,6 +34,11 @@
   & button {
     @include button;
   }
+
+  & .counter {
+    margin-top: 15px;
+    font-size: $font-16;
+  }
 }
 
 .button__wrapper {

@@ -31,7 +31,7 @@ function Card(props) {
         ) : (
           <button onClick={showTranslation}>Показать перевод</button>
         )}
-        <div>
+        <div className="counter">
           {idWord + 1} / {props.word.length}
         </div>
       </div>
