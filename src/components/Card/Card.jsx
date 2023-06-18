@@ -1,43 +1,47 @@
 import React, { useState } from "react";
 import "./_Card.scss";
 
-function Card(props) {
+function Card({ word }) {
   console.log("render"); // оптимизировать рендер компонента, но как?
-  const [pressed, setPressed] = useState(false); // состояние кнопки перевода (нажата или нет)
-  const [idWord, setIdWord] = useState(0); // состояние индекса полученного слова в массиве
-  const word = props.word[idWord]; // получение слова по индексу
+  const [pressed, setPressed] = useState(false); // состояние кнопки "показать перевод"
+  const [idWord, setIdWord] = useState(0); // индекс текущего слова
+  const { english, transcription, russian } = word[idWord]; //извлечение данных текущего слова из массива
 
-  /* изменяет состояние кнопки перевода */
+  /* изменяет состояние кнопки "показать перевод" */
   function showTranslation() {
     setPressed((prev) => !prev);
   }
 
+  function changeWord(nextId) {
+    if (nextId >= 0 && nextId < word.length) {
+      // проверка, что индекс находится в допустимом диапазоне
+      setIdWord(nextId); //изменение индекса на новый
+      setPressed(false); // изменение состояния кнопки "показать перевод"
+    }
+  }
+
   /* меняет индекс на 1 меньше (но не меньше 0), возвращает кнопку перевода с состояние false */
   function showPrevWord() {
-    idWord === 0 ? setIdWord(0) : setIdWord(idWord - 1);
-    setPressed(false);
+    changeWord(idWord - 1);
   }
 
   /* меняет индекс на 1 больше (но не больше количества элементов массива), возвращает кнопку перевода с состояние false */
   function showNextWord() {
-    idWord === props.word.length - 1
-      ? setIdWord(props.word.length - 1)
-      : setIdWord(idWord + 1);
-    setPressed(false);
+    changeWord(idWord + 1);
   }
 
   return (
     <div className="card">
       <div className="card__wrapper">
-        <div className="card__word">{word.english}</div>
-        <div className="card__transcription">{word.transcription}</div>
+        <div className="card__word">{english}</div>
+        <div className="card__transcription">{transcription}</div>
         {pressed ? (
-          <div className="card__translation">{word.russian}</div>
+          <div className="card__translation">{russian}</div>
         ) : (
           <button onClick={showTranslation}>Показать перевод</button>
         )}
         <div className="counter">
-          {idWord + 1} / {props.word.length}
+          {idWord + 1} / {word.length}
         </div>
       </div>
       <div className="button__wrapper">
