@@ -1,7 +1,7 @@
 import React from "react";
 import Word from "../Word/Word";
 import "./_WordList.scss";
-import words from "../words.json";
+import words from "../../words.json";
 
 export default function WordList() {
   return (

@@ -2,12 +2,18 @@
 
 .header {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
+  position: sticky;
   min-height: 4rem;
+  min-width: 100%;
   background-color: $bc-header;
   padding: 5px;
   padding-left: 20px;
   box-sizing: border-box;
+
+  & .header__info {
+    display: flex;
+  }
 
   & .header__title {
     @include font($font-Basic, $bold, $font-30, $font-dark);
@@ -16,5 +22,26 @@
   & img {
     height: 50px;
     margin-right: 50px;
+  }
+
+  & ul {
+    padding-right: 30px;
+    display: flex;
+    gap: 30px;
+
+    & li {
+      list-style-type: none;
+
+      & a {
+        text-decoration: none;
+        color: $font-dark;
+        font-size: $font-16;
+        font-weight: $bold;
+      }
+
+      & a:hover {
+        color: #000;
+      }
+    }
   }
 }
