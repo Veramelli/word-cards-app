@@ -22,7 +22,7 @@ export default function WordList() {
         </div>
       </div>
       {words.map((word) => (
-        <Word word={word} />
+        <Word key={word.id} word={word} />
       ))}
     </div>
   );
