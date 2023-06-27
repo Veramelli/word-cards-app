@@ -11,21 +11,9 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <div className="header__nav">
-          <nav>
-            <ul>
-              <li>
-                <Link to="/">Главная</Link>
-              </li>
-              <li>
-                <Link to="/train">Тренироваться</Link>
-              </li>
-            </ul>
-          </nav>
-        </div>
         <Header />
         <Routes>
-          <Route path="/" element={<WordList />} />
+          <Route path="/home" element={<WordList />} />
           <Route path="/train" element={<Card word={words} />} />
         </Routes>
 

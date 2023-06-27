@@ -1,5 +1,6 @@
 import React from "react";
 import "./_Header.scss";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
@@ -20,10 +21,10 @@ export default function Header() {
         <nav>
           <ul>
             <li>
-              <a href="http://">Главная</a>
+              <Link to="/home">Главная</Link>
             </li>
             <li>
-              <a href="http://">Тренироваться</a>
+              <Link to="/train">Тренироваться</Link>
             </li>
           </ul>
         </nav>
