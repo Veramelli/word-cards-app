@@ -7,10 +7,12 @@ export default function Header() {
     <header className="header">
       <div className="header__info">
         <div className="header__logo">
-          <img
-            src="https://www.yiiframework.com/image/design/logo/yii3_sign.png"
-            alt="fgfg"
-          />
+          <Link to="/home">
+            <img
+              src="https://www.yiiframework.com/image/design/logo/yii3_sign.png"
+              alt="fgfg"
+            />
+          </Link>
         </div>
         <div className="header__title">
           <div>Изучай английский вместе с нами</div>

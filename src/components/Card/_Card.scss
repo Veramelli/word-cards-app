@@ -4,16 +4,16 @@
   box-sizing: border-box;
   padding-top: 15px;
   padding-bottom: 15px;
-  height: 55vh;
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   background-color: $bc-card;
   @include font($font-Card, $bold, $font-60, $font-dark);
 
   & .card__wrapper {
-    margin: 1.5rem auto 0;
+    //margin: 1.5rem auto 0;
     padding-bottom: 15px;
     height: 30vh;
     width: 30vw;

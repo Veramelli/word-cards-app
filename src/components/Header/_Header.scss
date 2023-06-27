@@ -3,13 +3,14 @@
 .header {
   display: flex;
   justify-content: space-between;
-  position: sticky;
+  position: fixed;
   min-height: 4rem;
   min-width: 100%;
   background-color: $bc-header;
   padding: 5px;
   padding-left: 20px;
   box-sizing: border-box;
+  z-index: 999;
 
   & .header__info {
     display: flex;
